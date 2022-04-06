@@ -1,0 +1,7 @@
+[color]
+	ui = auto
+[user]
+	name = Andy Rae
+	email = hello@rae.li
+[alias]
+	ac = !git add -A && git commit -m
