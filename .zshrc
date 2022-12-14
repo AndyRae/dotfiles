@@ -106,6 +106,5 @@ eval "$(pyenv virtualenv-init -)"
 # Created by `pipx` on 2022-04-06 17:48:07
 export PATH="$PATH:/Users/ar/.local/bin"
 
-source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
-source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.1.2
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
