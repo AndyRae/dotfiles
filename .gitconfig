@@ -8,11 +8,12 @@
 [core]
 	editor = nano
 	excludesfile = /Users/ar/.gitignore_global
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[pull]
-	rebase = true
+[merge]
+    tool = vscode
+[mergetool "vscode"]
+    cmd = code --wait --merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
+    trustExitCode = true
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff "$LOCAL" "$REMOTE"
