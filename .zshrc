@@ -65,13 +65,6 @@ ZSH_THEME="nicoulaj"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-docker
-git
-iterm2
-kubectl
-minikube
-npm
-poetry
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -105,11 +98,5 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../../'
 
-export PATH="/usr/local/bin:$PATH"
-eval "$(pyenv virtualenv-init -)"
-
-# Created by `pipx` on 2022-04-06 17:48:07
-export PATH="$PATH:/Users/ar/.local/bin"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+# FNM
+eval "$(fnm env --use-on-cd --shell zsh)"
