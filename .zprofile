@@ -1,4 +1,5 @@
 [ -n "$HOMEBREW_PREFIX" ] || eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)" 
 
 
