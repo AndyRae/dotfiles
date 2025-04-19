@@ -98,6 +98,14 @@ export EDITOR=nano
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../../'
+alias k='kubectl'
+alias h='helm'
+alias g='git'
+alias gc='git commit -m'
 
 # FNM
 eval "$(fnm env --use-on-cd --shell zsh)"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/ar/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
