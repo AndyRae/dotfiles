@@ -2,7 +2,7 @@
 	ui = auto
 [user]
 	name = Andy Rae
-	email = hello@rae.li
+	email = 1127507+AndyRae@users.noreply.github.com
 [alias]
 	ac = !git add -A && git commit -m
 [core]
