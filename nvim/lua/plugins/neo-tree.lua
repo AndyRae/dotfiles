@@ -1,0 +1,49 @@
+return {
+  "nvim-neo-tree/neo-tree.nvim",
+  branch = "v3.x",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-tree/nvim-web-devicons",
+    "MunifTanjim/nui.nvim",
+  },
+  cmd = "Neotree",
+  keys = {
+    { "<leader>e", "<cmd>Neotree toggle reveal<CR>", desc = "Toggle file explorer" },
+    { "<leader>o", "<cmd>Neotree focus<CR>", desc = "Focus file explorer" },
+  },
+  opts = {
+    close_if_last_window = true,
+    filesystem = {
+      follow_current_file = { enabled = true },
+      hijack_netrw_behavior = "open_current",
+      use_libuv_file_watcher = true,
+      filtered_items = {
+        visible = true, -- show hidden/dotfiles but keep them dim
+        hide_dotfiles = false,
+        hide_gitignored = false,
+      },
+    },
+    window = {
+      width = 32,
+      mappings = {
+        ["<space>"] = "none", -- free up space since it's our leader key
+      },
+    },
+    default_component_configs = {
+      indent = { with_expanders = true },
+      git_status = {
+        symbols = {
+          added = "✚",
+          modified = "",
+          deleted = "✖",
+          renamed = "➜",
+          untracked = "",
+          ignored = "",
+          unstaged = "",
+          staged = "",
+          conflict = "",
+        },
+      },
+    },
+  },
+}
