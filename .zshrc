@@ -82,7 +82,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
-export EDITOR=nano
+export EDITOR=nvim
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -105,6 +105,16 @@ alias gc='git commit -m'
 
 # FNM
 eval "$(fnm env --use-on-cd --shell zsh)"
+
+# Yazi shell wrapper: `y` opens yazi and cd's the shell to wherever you
+# were browsing on exit (q to cd, Q to quit without cd'ing).
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	command rm -f -- "$tmp"
+}
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/ar/.rd/bin:$PATH"
