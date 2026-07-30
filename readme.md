@@ -9,6 +9,6 @@
 
     mkdir -p "$HOME/.config"
     ln -sf "$HOME/dotfiles/nvim" "$HOME/.config/nvim"
-    ln -sf "$HOME/dotfiles/aerospace.toml" "$HOME/.config/aerospace.toml
+    ln -sf "$HOME/dotfiles/aerospace.toml" "$HOME/.config/aerospace/aerospace.toml
 ```
 
