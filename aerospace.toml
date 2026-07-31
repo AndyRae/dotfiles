@@ -81,7 +81,10 @@ gaps.outer.right =      10
 [workspace-to-monitor-force-assignment]
     1 = 1                            # Monitor sequence number from left to right. 1-based indexing
     2 = 'main'                       # Main monitor
-    9 = 'secondary'
+    6 = ['secondary', 'main']
+    7 = ['secondary', 'main']
+    8 = ['secondary', 'main']
+    9 = ['secondary', 'main']
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 # 'main' binding mode must be always presented
