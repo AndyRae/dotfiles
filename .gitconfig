@@ -1,19 +1,26 @@
-[color]
-	ui = auto
 [user]
 	name = Andy Rae
 	email = 1127507+AndyRae@users.noreply.github.com
 [alias]
 	ac = !git add -A && git commit -m
+[color]
+	ui = auto
 [core]
-	editor = nano
+	editor = nvim
 	excludesfile = ~/.gitignore_global
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[pull]
+	ff = only
 [merge]
-    tool = vscode
-[mergetool "vscode"]
-    cmd = code --wait --merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
-    trustExitCode = true
+	tool = nvimdiff
+	conflictstyle = zdiff3
+[mergetool]
+	keepBackup = false
 [diff]
-    tool = vscode
-[difftool "vscode"]
-    cmd = code --wait --diff "$LOCAL" "$REMOTE"
+	tool = nvimdiff
+	algorithm = histogram
+[rerere]
+	enabled = true

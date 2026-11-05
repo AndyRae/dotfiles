@@ -28,9 +28,9 @@ return {
 
           map("gd", vim.lsp.buf.definition, "Goto definition")
           map("gD", vim.lsp.buf.declaration, "Goto declaration")
-          map("gr", vim.lsp.buf.references, "Goto references")
+          -- nowait: otherwise gr waits timeoutlen for the built-in grr/grn/gra/gri
+          vim.keymap.set("n", "gr", vim.lsp.buf.references, { buffer = event.buf, nowait = true, desc = "LSP: Goto references" })
           map("gI", vim.lsp.buf.implementation, "Goto implementation")
-          map("K", vim.lsp.buf.hover, "Hover documentation")
           map("<leader>ca", vim.lsp.buf.code_action, "Code action", { "n", "v" })
           map("<leader>cr", vim.lsp.buf.rename, "Rename symbol")
           -- Signature help is Neovim's built-in <C-s> in insert mode

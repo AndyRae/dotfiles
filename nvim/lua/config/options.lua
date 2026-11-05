@@ -40,7 +40,7 @@ opt.undofile = true
 opt.swapfile = false
 opt.updatetime = 250
 opt.timeoutlen = 400
-opt.completeopt = { "menu", "menuone", "noselect" }
+opt.completeopt = { "menu", "menuone", "noinsert" } -- matches nvim-cmp (plugins/cmp.lua)
 
 -- Have a Nerd Font? Set to true for nicer icons everywhere (explorer,
 -- statusline, tabs). If icons show as boxes/question marks, leave false
