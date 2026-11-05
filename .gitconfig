@@ -7,7 +7,7 @@
 	ac = !git add -A && git commit -m
 [core]
 	editor = nano
-	excludesfile = /Users/ar/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [merge]
     tool = vscode
 [mergetool "vscode"]

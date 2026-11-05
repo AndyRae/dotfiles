@@ -34,7 +34,7 @@ return {
           map("K", vim.lsp.buf.hover, "Hover documentation")
           map("<leader>ca", vim.lsp.buf.code_action, "Code action", { "n", "v" })
           map("<leader>cr", vim.lsp.buf.rename, "Rename symbol")
-          map("<leader>cs", vim.lsp.buf.signature_help, "Signature help", "i")
+          -- Signature help is Neovim's built-in <C-s> in insert mode
           -- Formatting is handled by conform.nvim's <leader>cf (falls back to LSP formatting)
         end,
       })

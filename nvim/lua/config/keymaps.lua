@@ -33,7 +33,6 @@ map("n", "<leader>q", "<cmd>q<CR>", { desc = "Quit" })
 map("n", "<leader>bd", "<cmd>bdelete<CR>", { desc = "Delete buffer" })
 
 -- Diagnostics
-map("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
-map("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
+-- [d / ]d are built in (Neovim 0.11+)
 map("n", "<leader>xd", vim.diagnostic.open_float, { desc = "Line diagnostics" })
 map("n", "<leader>xq", vim.diagnostic.setloclist, { desc = "Diagnostics to loclist" })

@@ -7,8 +7,8 @@
       ln -sf "$HOME/dotfiles/$f" "$HOME/$f"
     done
 
-    mkdir -p "$HOME/.config"
-    ln -sf "$HOME/dotfiles/nvim" "$HOME/.config/nvim"
-    ln -sf "$HOME/dotfiles/aerospace.toml" "$HOME/.config/aerospace/aerospace.toml
+    mkdir -p "$HOME/.config/aerospace"
+    ln -sfn "$HOME/dotfiles/nvim" "$HOME/.config/nvim"
+    ln -sf "$HOME/dotfiles/aerospace.toml" "$HOME/.config/aerospace/aerospace.toml"
 ```
 
