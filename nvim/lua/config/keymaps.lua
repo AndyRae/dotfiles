@@ -36,3 +36,7 @@ map("n", "<leader>bd", "<cmd>bdelete<CR>", { desc = "Delete buffer" })
 -- [d / ]d are built in (Neovim 0.11+)
 map("n", "<leader>xd", vim.diagnostic.open_float, { desc = "Line diagnostics" })
 map("n", "<leader>xq", vim.diagnostic.setloclist, { desc = "Diagnostics to loclist" })
+
+-- Move by screen line on wrapped lines (counts like 5j still move by real lines)
+map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+map({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })

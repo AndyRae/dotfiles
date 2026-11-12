@@ -11,7 +11,9 @@ opt.signcolumn = "yes"
 opt.termguicolors = true
 opt.cursorline = true
 opt.scrolloff = 8
-opt.wrap = false
+opt.wrap = true
+opt.linebreak = true -- wrap at word boundaries, not mid-word
+opt.breakindent = true -- keep indentation on wrapped lines
 opt.splitright = true
 opt.splitbelow = true
 
