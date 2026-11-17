@@ -1,10 +1,5 @@
 return {
-  -- Comment lines with gc / gcc
-  {
-    "numToStr/Comment.nvim",
-    event = { "BufReadPost", "BufNewFile" },
-    opts = {},
-  },
+  -- Commenting (gc / gcc) is built into Neovim 0.10+
 
   -- Auto-close and auto-rename html/jsx tags
   {

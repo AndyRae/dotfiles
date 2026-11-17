@@ -11,7 +11,13 @@ return {
       "html", "css", "javascript", "typescript", "tsx",
       "python", "go", "rust", "c",
     }
-    require("nvim-treesitter").install(ensure_installed)
+    -- Parsers are compiled locally with the tree-sitter CLI. Without it every
+    -- parser fails with its own error on each start, so warn once instead.
+    if vim.fn.executable("tree-sitter") == 1 then
+      require("nvim-treesitter").install(ensure_installed)
+    else
+      vim.notify("tree-sitter CLI not found, so no parsers were installed (brew install tree-sitter-cli)", vim.log.levels.WARN)
+    end
 
     -- Enable highlighting, folding and indent for any filetype with an
     -- installed (or installable) parser

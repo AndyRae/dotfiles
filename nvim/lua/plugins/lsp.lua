@@ -8,8 +8,7 @@ return {
     dependencies = {
       "mason-org/mason.nvim",
       "mason-org/mason-lspconfig.nvim",
-      "hrsh7th/cmp-nvim-lsp",
-      { "j-hui/fidget.nvim", opts = {} }, -- lightweight LSP progress notifications
+      "saghen/blink.cmp",
     },
     config = function()
       -- Diagnostic UI
@@ -39,9 +38,9 @@ return {
         end,
       })
 
-      -- Give every server the completion capabilities nvim-cmp adds
+      -- Give every server the completion capabilities blink.cmp adds
       vim.lsp.config("*", {
-        capabilities = require("cmp_nvim_lsp").default_capabilities(),
+        capabilities = require("blink.cmp").get_lsp_capabilities(),
       })
 
       -- Per-server overrides. Add more as you pick up languages, e.g.:

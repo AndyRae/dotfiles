@@ -19,6 +19,8 @@ require("lazy").setup({
     { import = "plugins" },
   },
   install = { colorscheme = { "github_dark_default" } },
-  checker = { enabled = true, notify = false },
+  -- Plugins stay at the versions in lazy-lock.json. Update on purpose with
+  -- :Lazy update, then commit the lockfile.
+  checker = { enabled = false },
   change_detection = { notify = false },
 })
