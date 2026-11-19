@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(set -e)",
+      "Bash(mv /Users/a/.config/nvim /Users/a/dotfiles/nvim)",
+      "Bash(ln -s /Users/a/dotfiles/nvim /Users/a/.config/nvim)",
+      "Read(//Users/a/dotfiles/**)",
+      "Bash(nvim --headless \"+Lazy! sync\" +qa)",
+      "Bash(nvim *)",
+      "Bash(brew list *)",
+      "Bash(zsh -ic 'type y; echo \"---\"; echo n | y --version 2>&1 || true')",
+      "Bash(zsh -ic 'echo $EDITOR' 2>&1)"
+    ]
+  }
+}

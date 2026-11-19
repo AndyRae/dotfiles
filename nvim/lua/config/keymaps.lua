@@ -29,6 +29,13 @@ map("v", "K", ":m '<-2<CR>gv=gv")
 map("n", "<leader>w", "<cmd>w<CR>", { desc = "Save file" })
 map("n", "<leader>q", "<cmd>q<CR>", { desc = "Quit" })
 
+-- Toggle comment, like VS Code's Option-/ (built-in gc; Option needs
+-- macos-option-as-alt in Ghostty). <leader>/ works in any terminal.
+map("n", "<M-/>", "gcc", { remap = true, desc = "Toggle comment" })
+map("x", "<M-/>", "gc", { remap = true, desc = "Toggle comment" })
+map("n", "<leader>/", "gcc", { remap = true, desc = "Toggle comment" })
+map("x", "<leader>/", "gc", { remap = true, desc = "Toggle comment" })
+
 -- Buffer navigation (also see bufferline.lua for <leader>b* and [b/]b)
 map("n", "<leader>bd", "<cmd>bdelete<CR>", { desc = "Delete buffer" })
 
